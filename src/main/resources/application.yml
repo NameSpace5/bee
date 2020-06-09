@@ -1,0 +1,22 @@
+# 全局配置 start
+app-config:
+  wx-app-id: wx375f0b6296f282df #微信AppID
+  wx-app-secret: 7979365590e8a14cb8db8156b2935663  #微信AppSecret
+
+
+# 全局配置 end
+
+server:
+  port: 80
+spring:
+  datasource:  #数据源配置
+    type: com.alibaba.druid.pool.DruidDataSource  #连接池类型
+    password: 123456
+    username: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/goods_market_db?serverTimezone=GMT
+
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true #数据库表变驼峰写法
+  mapper-locations: classpath*:mybatis/mapper/**/*.xml
